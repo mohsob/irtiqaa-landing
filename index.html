@@ -437,11 +437,11 @@ footer{background:#faf9f6;text-align:center;padding:18px;color:#777;font-size:10
  </div>
 </section>
 
-<section class="services wrap" id="features">
+<section class="services wrap" id="features" dir="rtl">
  <div class="service-box">
-  <div class="service"><div class="circle"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 30h44M14 30v22h36V30M8 52h48M18 30V23l14-12 14 12v7M26 52V38h12v14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>التربية الإيمانية</h3><p>غرس القيم الإسلامية والأخلاق الحميدة بناءً على منهج رباني.</p></div>
-  <div class="service"><div class="circle"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M13 12h24c5 0 9 4 9 9v31H22c-5 0-9-4-9-9V12Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M37 12v31c0-5 4-9 9-9h10V12H37ZM20 22h13M20 29h13M20 36h9" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div><h3>التجويد</h3><p>تعليم أحكام التجويد بطريقة سهلة ومبسطة.</p></div>
-  <div class="service"><div class="circle"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M13 11h25c6 0 10 4 10 10v31H23c-6 0-10-4-10-10V11Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M38 11v31c0-5 4-8 10-8h10V11H38ZM21 20h11M21 27h11M21 34h8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div><h3>تحفيظ القرآن الكريم</h3><p>منهج متميز لمختلف المستويات مع متابعة وحفظ متقن.</p></div>
+<div class="service"><div class="circle"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M13 11h25c6 0 10 4 10 10v31H23c-6 0-10-4-10-10V11Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M38 11v31c0-5 4-8 10-8h10V11H38ZM21 20h11M21 27h11M21 34h8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div><h3>تحفيظ القرآن الكريم</h3><p>منهج متميز لمختلف المستويات مع متابعة وحفظ متقن.</p></div>
+<div class="service"><div class="circle"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M13 12h24c5 0 9 4 9 9v31H22c-5 0-9-4-9-9V12Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M37 12v31c0-5 4-9 9-9h10V12H37ZM20 22h13M20 29h13M20 36h9" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div><h3>التجويد</h3><p>تعليم أحكام التجويد بطريقة سهلة ومبسطة.</p></div>
+<div class="service"><div class="circle"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 30h44M14 30v22h36V30M8 52h48M18 30V23l14-12 14 12v7M26 52V38h12v14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>التربية الإيمانية</h3><p>غرس القيم الإسلامية والأخلاق الحميدة بناءً على منهج رباني.</p></div>
  </div>
 </section>
 
@@ -542,5 +542,78 @@ content:none!important;background:none!important;
 @media(max-width:700px){
   .services .service-box{grid-template-columns:1fr!important}
   .services .service{grid-column:auto!important;min-height:0}
+}
+</style>
+
+<style id="service-final-authoritative">
+.services .service-box{
+  direction:rtl!important;
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  grid-auto-flow:row!important;
+  align-items:stretch!important;
+  width:100%!important;
+}
+.services .service-box .service{
+  grid-column:auto!important;
+  grid-row:auto!important;
+  align-self:stretch!important;
+  min-height:150px!important;
+}
+@media(max-width:700px){
+  .services .service-box{grid-template-columns:1fr!important}
+  .services .service-box .service{grid-column:auto!important;min-height:0!important}
+}
+</style>
+
+<style id="polished-service-box">
+/* Elegant single service panel: one section, not three separate products. */
+.services{
+  padding:28px 0 14px!important;
+}
+.services .service-box{
+  background:rgba(255,255,255,.98)!important;
+  border:1px solid #eee2c9!important;
+  border-radius:22px!important;
+  box-shadow:0 8px 26px rgba(20,45,70,.07)!important;
+  overflow:hidden!important;
+  position:relative!important;
+}
+.services .service{
+  background:transparent!important;
+  padding:24px 30px 22px!important;
+  min-height:164px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+}
+.services .service:not(:last-child){
+  border-left:1px solid #ead39d!important;
+}
+.services .circle{
+  background:#fffdf8!important;
+  border-color:#e8cb8c!important;
+  margin-bottom:10px!important;
+}
+.services .service h3{
+  margin-bottom:6px!important;
+}
+.services .service p{
+  max-width:260px!important;
+}
+@media(max-width:700px){
+  .services{padding:20px 0 8px!important}
+  .services .service-box{
+    border-radius:18px!important;
+  }
+  .services .service{
+    min-height:0!important;
+    padding:20px 18px!important;
+  }
+  .services .service:not(:last-child){
+    border-left:0!important;
+    border-bottom:1px solid #ead39d!important;
+  }
 }
 </style>
