@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>أكاديمية ارتقاء لتحفيظ القرآن الكريم والتربية الإيمانية</title>
+<meta name="description" content="أكاديمية ارتقاء لتحفيظ القرآن الكريم والتربية الإيمانية عن بُعد">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
+:root {
+ --navy:#0d3b66; --gold:#c99324; --gold2:#e4b457; --green:#20a64b;
+ --cream:#fffaf1; --text:#203f5e; --muted:#777;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:#fff;color:var(--text);font-family:Cairo,Tahoma,Arial,sans-serif}
+a{text-decoration:none}
+.wrap{width:min(930px,92%);margin:auto}
+header{height:80px;background:rgba(255,255,255,.97);display:flex;align-items:center;border-bottom:1px solid #eee9df;position:sticky;top:0;z-index:1000;box-shadow:0 2px 14px rgba(18,48,74,.07);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:15px}
+.logo{width:220px;height:70px;object-fit:contain;background:#fff}
+nav{display:flex;align-items:center;gap:27px;font-size:12px;font-weight:800}
+nav a{color:#222;position:relative;white-space:nowrap}
+nav a.active{color:var(--gold)}
+nav a.active:after{content:"";position:absolute;bottom:-25px;right:0;left:0;height:2px;background:var(--gold)}
+.top-btn{background:var(--gold);color:#fff;border-radius:25px;padding:10px 25px;font-size:13px;font-weight:800;white-space:nowrap}
+
+.hero{
+height:455px;min-height:455px;position:relative;overflow:hidden;background:#fff}
+.hero-grid{height:100%;position:relative;display:block}
+.hero-photo{position:absolute;left:0;top:0;width:64%;height:100%;background:url("hero.jpg") left center/cover no-repeat}
+.hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,0) 57%,rgba(255,255,255,.08) 68%,rgba(255,255,255,.25) 79%,rgba(255,255,255,.72) 93%,#fff 100%)}
+.hero-copy{position:relative;z-index:2;width:44%;height:100%;margin-left:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px 38px 20px 12px}
+.kicker{color:var(--gold);font-weight:800;font-size:15px;margin-bottom:2px}
+h1{font-size:46px;line-height:1.12;margin:0;text-align:center;color:var(--navy);font-weight:900}
+h1 span{display:block;color:var(--gold)}
+.hero-copy p{font-size:15px;line-height:2;color:#35546f;text-align:center;max-width:380px;margin:17px 0 12px}
+.wa-btn{display:inline-flex;align-items:center;justify-content:center;background:var(--green);color:#fff;border-radius:11px;padding:12px 25px;font-size:16px;font-weight:900;box-shadow:0 6px 14px rgba(32,166,75,.18)}
+.sub{font-size:12px;margin-top:8px;color:#37536b}
+
+.services{margin-top:-8px;position:relative;z-index:2}
+.service-box{background:#fff;border-radius:24px;box-shadow:0 8px 24px rgba(25,50,75,.12);display:grid;grid-template-columns:repeat(3,1fr);overflow:hidden}
+.service{text-align:center;padding:22px 24px 19px;border-left:1px solid #f1dcae}
+.service:last-child{border-left:0}
+.circle{width:52px;height:52px;border:1px solid #f0d69a;border-radius:50%;display:grid;place-items:center;margin:auto auto 9px;color:var(--gold);font-size:24px}
+.service h3{font-size:16px;margin:0 0 7px;color:var(--navy)}
+.service p{font-size:11px;line-height:1.8;color:#777;margin:0}
+
+.about{padding:44px 0 24px}
+.about-grid{display:grid;grid-template-columns:47% 53%;gap:38px;align-items:center}
+.about-img{height:250px;border-radius:20px;background:url("about.jpg") center/cover no-repeat;background-position:center center}
+.about-copy{padding-right:8px}
+.section-title{color:var(--gold);font-size:25px;margin:0 0 12px;font-weight:900}
+.about-copy p{font-size:14px;line-height:2;color:#555;margin:0 0 18px}
+.mini{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.mini-item{text-align:center;font-size:10px;font-weight:700;color:#444}
+.mini-icon{font-size:25px;color:var(--gold);height:35px}
+
+.programs{padding:20px 0 42px;text-align:center}
+.programs h2{color:var(--gold);font-size:26px;margin:0 0 25px}
+.program-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.program{border:1px solid #eee7d9;border-radius:15px;padding:19px 17px;background:#fff;min-height:155px;box-shadow:0 4px 13px rgba(0,0,0,.035)}
+.program-icon{font-size:32px;color:var(--gold);height:42px}
+.program h3{font-size:15px;color:var(--navy);margin:3px 0 6px}
+.program p{font-size:11px;color:#666;line-height:1.8;margin:0}
+.more{display:inline-block;margin-top:16px;background:var(--gold);color:#fff;border-radius:24px;padding:9px 26px;font-size:12px;font-weight:800}
+
+.bottom{width:min(900px,92%);margin:0 auto 18px;border-radius:22px;min-height:145px;background:#fff8ec;display:flex;align-items:center;justify-content:center;gap:65px;overflow:hidden;border:1px solid #f4ead9}
+.bottom-copy{text-align:right}
+.bottom h2{font-size:22px;color:var(--navy);margin:0 0 4px}
+.bottom p{font-size:13px;color:var(--gold);font-weight:700;margin:0 0 12px}
+.bottom-art{width:245px;height:125px;background:url("bottom-art.jpg") center/cover no-repeat;border-radius:12px}
+.bottom .wa-btn{font-size:13px;padding:10px 22px}
+
+.advantages{border-top:1px solid #f0e8d9;padding:14px 0 20px}
+.adv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.adv{text-align:center;border-left:1px solid #eadfc9;font-size:10px;color:#777}
+.adv:last-child{border-left:0}
+.adv b{display:block;color:#555;font-size:11px}
+footer{background:#faf9f6;text-align:center;padding:18px;color:#777;font-size:10px}
+.float{position:fixed;left:18px;bottom:18px;width:56px;height:56px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-size:26px;box-shadow:0 7px 20px rgba(0,0,0,.2);z-index:50}
+
+@media(max-width:850px){
+ header{height:auto;padding:7px 0}
+ .logo{width:170px;height:58px}
+ nav{display:none}
+ .hero{height:auto;min-height:0}
+ .hero-grid{display:flex;flex-direction:column}
+ .hero-photo{position:relative;left:auto;top:auto;width:100%;height:310px;background-size:cover;background-position:center}
+ .hero-photo:after{width:100%;height:38%;top:auto;bottom:0;background:linear-gradient(180deg,rgba(255,255,255,0),#fff)}
+ .hero-copy{width:100%;height:auto;margin:0;padding:10px 18px 38px;text-align:center;background:#fff}
+ h1{font-size:37px}
+ .service-box{grid-template-columns:1fr}
+ .service{border-left:0;border-bottom:1px solid #f1dcae}
+ .service:last-child{border-bottom:0}
+ .about-grid{grid-template-columns:1fr}
+ .about-img{height:235px}
+ .program-grid{grid-template-columns:1fr}
+ .bottom{flex-direction:column;gap:12px;padding:20px}
+ .bottom-copy{text-align:center}
+ .bottom-art{width:270px}
+ .adv-grid{grid-template-columns:repeat(2,1fr);gap:15px}
+ .adv{border-left:0}
+}
+@media(max-width:480px){
+ .top-btn{padding:9px 15px;font-size:11px}
+ .logo{width:145px}
+ h1{font-size:31px}
+ .hero-photo{height:280px}
+ .mini{grid-template-columns:repeat(2,1fr);row-gap:14px}
+}
+
+/* Professional responsive layer */
+img{max-width:100%;height:auto}
+body{overflow-x:hidden}
+section[id]{scroll-margin-top:90px}
+@media (min-width:1200px){
+ .wrap{width:min(1120px,92%)}
+ .hero-copy{width:43%;padding-right:55px}
+ .hero-photo{width:65%}
+}
+@media (min-width:901px) and (max-width:1199px){
+ .wrap{width:92%}
+ nav{gap:18px;font-size:11px}
+ .top-btn{padding:10px 19px}
+ .hero-copy{width:45%;padding:20px}
+ h1{font-size:40px}
+}
+@media (max-width:700px){
+ header{height:68px}
+ .logo{width:145px;height:58px}
+ .top-btn{padding:8px 14px;font-size:10px}
+ .hero-photo{height:285px}
+ .hero-copy{padding:8px 16px 34px}
+ h1{font-size:31px}
+ .service-box{width:100%}
+ .about{padding-top:38px}
+}
+
+
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{overflow-x:hidden}
+section[id]{scroll-margin-top:90px}
+@media(min-width:1200px){
+ .wrap{width:min(1120px,92%)}
+ .hero-photo{width:65%}
+ .hero-copy{width:42%;padding-right:55px}
+}
+@media(min-width:901px) and (max-width:1199px){
+ .wrap{width:92%}
+ nav{gap:17px;font-size:11px}
+ .hero-photo{width:64%}
+ .hero-copy{width:44%;padding-right:25px}
+ h1{font-size:40px}
+}
+@media(max-width:700px){
+ header{height:68px}
+ .logo{width:145px;height:58px}
+ .top-btn{padding:8px 14px;font-size:10px}
+ .hero-photo{height:300px}
+ h1{font-size:31px}
+}
+
+
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{overflow-x:hidden}
+section[id]{scroll-margin-top:90px}
+@media(min-width:1200px){
+ .wrap{width:min(1120px,92%)}
+ .hero-photo{width:65%}
+ .hero-copy{width:42%;padding-right:55px}
+}
+@media(min-width:901px) and (max-width:1199px){
+ .wrap{width:92%}
+ nav{gap:17px;font-size:11px}
+ .hero-photo{width:64%}
+ .hero-copy{width:44%;padding-right:25px}
+ h1{font-size:40px}
+}
+@media(max-width:700px){
+ header{height:68px}
+ .logo{width:145px;height:58px}
+ .top-btn{padding:8px 14px;font-size:10px}
+ .hero{height:auto;min-height:0}
+ .hero-grid{display:flex;flex-direction:column}
+ .hero-photo{position:relative;left:auto;top:auto;width:100%;height:310px;background-position:center}
+ .hero-photo:after{width:100%;height:32%;top:auto;bottom:0;background:linear-gradient(180deg,rgba(255,255,255,0),#fff)}
+ .hero-copy{width:100%;height:auto;margin:0;padding:10px 18px 38px;text-align:center;background:#fff}
+ h1{font-size:31px}
+}
+
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap nav">
+  <a href="#home"><img class="logo" src="logo.png" alt="أكاديمية ارتقاء"></a>
+  <nav>
+   <a class="active" href="#home">الرئيسية</a>
+   <a href="#about">عن الأكاديمية</a>
+   <a href="#programs">البرامج</a>
+   <a href="#features">المميزات</a>
+   <a href="#how">كيف نعمل</a>
+   <a href="#faq">الأسئلة الشائعة</a>
+   <a href="#contact">تواصل معنا</a>
+  </nav>
+  <a class="top-btn" href="https://wa.me/201014950652?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84" target="_blank" rel="noopener">سجل الآن</a>
+ </div>
+</header>
+
+<main id="home">
+<section class="hero">
+ <div class="hero-grid">
+  <div class="hero-photo"></div>
+  <div class="hero-copy">
+   <div class="kicker">تعليم عن بُعد للأطفال والناشئة</div>
+   <h1>نعلّم القرآن...<span>لتحيا به القلوب</span></h1>
+   <p>أكاديمية متخصصة في تحفيظ القرآن الكريم بأحكام التجويد والتربية الإيمانية عن بُعد.</p>
+   <a class="wa-btn" href="https://wa.me/201014950652?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84" target="_blank" rel="noopener">▣ &nbsp; احجز حصتك التجريبية المجانية</a>
+   <div class="sub">حصة تجريبية مجانية بدون أي التزام</div>
+  </div>
+ </div>
+</section>
+
+<section class="services wrap" id="features">
+ <div class="service-box">
+  <div class="service"><div class="circle">⌂</div><h3>التربية الإيمانية</h3><p>غرس القيم الإسلامية والأخلاق الحميدة بناءً على منهج رباني.</p></div>
+  <div class="service"><div class="circle">▱</div><h3>التجويد</h3><p>تعليم أحكام التجويد بطريقة سهلة ومبسطة.</p></div>
+  <div class="service"><div class="circle">▤</div><h3>تحفيظ القرآن الكريم</h3><p>منهج متميز لمختلف المستويات مع متابعة وحفظ متقن.</p></div>
+ </div>
+</section>
+
+<section class="about wrap" id="about">
+ <div class="about-grid">
+  <div class="about-img"></div>
+  <div class="about-copy">
+   <h2 class="section-title">عن أكاديمية ارتقاء</h2>
+   <p>نسعى في أكاديمية ارتقاء إلى تعليم كتاب الله عز وجل لأبنائنا وبناتنا بأعلى معايير الجودة، مع غرس القيم الإسلامية والتربية الإيمانية في بيئة آمنة ومحفزة.</p>
+   <div class="mini">
+    <div class="mini-item"><div class="mini-icon">♙</div>معلمات مؤهلات</div>
+    <div class="mini-item"><div class="mini-icon">▦</div>مرونة في المواعيد</div>
+    <div class="mini-item"><div class="mini-icon">▣</div>متابعة مستمرة</div>
+    <div class="mini-item"><div class="mini-icon">♢</div>بيئة تعليمية آمنة</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="programs wrap" id="programs">
+ <h2>برامجنا التعليمية</h2>
+ <div class="program-grid">
+  <div class="program"><div class="program-icon">♧</div><h3>برامج التربية الإيمانية</h3><p>تعزيز القيم والأخلاق الإسلامية من خلال منهج تربوي مخصص للأطفال.</p></div>
+  <div class="program"><div class="program-icon">⚔</div><h3>برامج التجويد</h3><p>تعلم أحكام التجويد وتطبيقها قراءةً وسماعًا بطريقة عملية.</p></div>
+  <div class="program"><div class="program-icon">▱</div><h3>برامج التحفيظ</h3><p>حفظ القرآن الكريم مع مراجعة دورية حتى الإتقان بإذن الله.</p></div>
+ </div>
+ <a class="more" href="https://wa.me/201014950652?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84" target="_blank" rel="noopener">عرض جميع البرامج</a>
+</section>
+
+<section class="bottom" id="contact">
+ <div class="bottom-copy">
+  <h2>ابدأ رحلة طفلك مع القرآن اليوم</h2>
+  <p>سجل الآن واحصل على حصتك التجريبية المجانية</p>
+  <a class="wa-btn" href="https://wa.me/201014950652?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84" target="_blank" rel="noopener">▣ &nbsp; احجز حصتك التجريبية المجانية</a>
+ </div>
+ <div class="bottom-art"></div>
+</section>
+
+<section class="advantages wrap" id="how">
+ <div class="adv-grid">
+  <div class="adv">♧<b>خبرة وثقة</b>سنوات من الخبرة في التعليم</div>
+  <div class="adv">✪<b>جودة عالية</b>تعليم احترافي بمعايير عالية</div>
+  <div class="adv">♧<b>أمان وخصوصية</b>حماية بياناتك وخصوصيتك</div>
+  <div class="adv">♧<b>خدمة عملاء مميزة</b>دعم فني ودود وسريع</div>
+ </div>
+</section>
+
+<section class="wrap" id="faq" style="padding:20px 0 35px">
+ <h2 class="section-title" style="text-align:center">الأسئلة الشائعة</h2>
+ <div style="max-width:750px;margin:auto;display:grid;gap:10px">
+  <details style="padding:13px 17px;border:1px solid #eee2c9;border-radius:12px"><summary><b>هل توجد حصة تجريبية مجانية؟</b></summary><p>نعم، يمكنك التواصل معنا لمعرفة التفاصيل وحجز الحصة المناسبة.</p></details>
+  <details style="padding:13px 17px;border:1px solid #eee2c9;border-radius:12px"><summary><b>هل الدراسة أونلاين؟</b></summary><p>نعم، الدراسة عن بُعد مع متابعة مستمرة.</p></details>
+ </div>
+</section>
+</main>
+
+<footer>© 2026 أكاديمية ارتقاء لتحفيظ القرآن الكريم والتربية الإيمانية — جميع الحقوق محفوظة</footer>
+<a class="float" href="https://wa.me/201014950652?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84" target="_blank" rel="noopener" aria-label="واتساب">◉</a>
+
+<!-- Snapchat Pixel: ضع كود Snap Pixel الخاص بك هنا بعد إنشائه من Snapchat Ads Manager. -->
+</body>
+</html>
