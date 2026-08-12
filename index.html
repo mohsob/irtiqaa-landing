@@ -81,9 +81,11 @@ footer{background:#faf9f6;text-align:center;padding:18px;color:#777;font-size:10
 .float{
 position:fixed;left:18px;bottom:18px;width:58px;height:58px;border-radius:50%;
 background:#25D366;color:#fff;display:grid;place-items:center;
-box-shadow:0 7px 20px rgba(0,0,0,.20);z-index:50;
+box-shadow:0 6px 18px rgba(0,0,0,.18);z-index:50;
 transition:transform .2s ease,box-shadow .2s ease
 }
+.float svg{width:40px;height:40px;display:block}
+.float:hover{transform:translateY(-2px);box-shadow:0 9px 22px rgba(0,0,0,.22)}
 .float svg{width:34px;height:34px;display:block}
 .float:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.24)}
 
@@ -196,6 +198,19 @@ section[id]{scroll-margin-top:90px}
  h1{font-size:31px}
 }
 
+
+.how{padding:8px 0 34px}
+.how-inner{border-top:1px solid #f0e8d9;padding-top:28px}
+.how-title{text-align:center;margin-bottom:22px}
+.how-title h2{color:var(--gold);font-size:24px;margin:0 0 5px}
+.how-title p{font-size:12px;color:#777;margin:0}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.how-step{text-align:center;padding:18px 14px;border:1px solid #eee6d7;border-radius:14px;background:#fff}
+.how-step span{display:block;color:var(--gold);font-size:12px;font-weight:900;margin-bottom:6px}
+.how-step b{display:block;color:var(--navy);font-size:14px;margin-bottom:5px}
+.how-step small{display:block;color:#777;font-size:11px;line-height:1.8}
+@media(max-width:700px){.how-grid{grid-template-columns:1fr}.how{padding-bottom:25px}}
+
 </style>
 </head>
 <body>
@@ -206,7 +221,7 @@ section[id]{scroll-margin-top:90px}
    <a class="active" href="#home">الرئيسية</a>
    <a href="#about">عن الأكاديمية</a>
    <a href="#programs">البرامج</a>
-   <a href="#features">المميزات</a>
+   <a href="#features">خدماتنا</a>
    <a href="#how">كيف نعمل</a>
    <a href="#faq">الأسئلة الشائعة</a>
    <a href="#contact">تواصل معنا</a>
@@ -272,12 +287,17 @@ section[id]{scroll-margin-top:90px}
  <div class="bottom-art"></div>
 </section>
 
-<section class="advantages wrap" id="how">
- <div class="adv-grid">
-  <div class="adv"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="24" cy="22" r="8" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="45" cy="25" r="6" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M10 51c1-10 7-15 14-15s13 5 14 15M37 51c1-7 5-11 10-11 4 0 7 3 8 11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg><b>خبرة وثقة</b>سنوات من الخبرة في التعليم</div>
-  <div class="adv"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 8c4 7 9 10 16 12-7 4-11 9-12 17-5-6-11-9-20-9 6-5 10-11 10-20 2 0 4 0 6 0Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M14 47c5-5 10-6 16-4M39 46c4-4 8-5 12-4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg><b>جودة عالية</b>تعليم احترافي بمعايير عالية</div>
-  <div class="adv"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 8 51 15v15c0 12-8 21-19 27C21 51 13 42 13 30V15l19-7Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="m23 32 6 6 12-13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><b>أمان وخصوصية</b>حماية بياناتك وخصوصيتك</div>
-  <div class="adv"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="24" cy="22" r="8" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="45" cy="25" r="6" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M10 51c1-10 7-15 14-15s13 5 14 15M37 51c1-7 5-11 10-11 4 0 7 3 8 11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg><b>خدمة عملاء مميزة</b>دعم فني ودود وسريع</div>
+<section class="how wrap" id="how">
+ <div class="how-inner">
+  <div class="how-title">
+   <h2>كيف نعمل؟</h2>
+   <p>خطوات بسيطة لبدء رحلة التعلم مع أكاديمية ارتقاء.</p>
+  </div>
+  <div class="how-grid">
+   <div class="how-step"><span>01</span><b>تواصل معنا</b><small>راسلنا عبر واتساب لمعرفة التفاصيل.</small></div>
+   <div class="how-step"><span>02</span><b>اختر البرنامج والموعد</b><small>نحدد ما يناسب الطالب ووقته.</small></div>
+   <div class="how-step"><span>03</span><b>ابدأ التعلم</b><small>تبدأ الحصة والمتابعة مع المعلمة.</small></div>
+  </div>
  </div>
 </section>
 
@@ -292,9 +312,9 @@ section[id]{scroll-margin-top:90px}
 
 <footer>© 2026 أكاديمية ارتقاء لتحفيظ القرآن الكريم والتربية الإيمانية — جميع الحقوق محفوظة</footer>
 <a class="float" href="https://wa.me/201014950652?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84" target="_blank" rel="noopener" aria-label="واتساب"><svg viewBox="0 0 48 48" aria-hidden="true">
-<circle cx="24" cy="24" r="22" fill="currentColor"/>
-<path d="M16.6 35.2 18 30.1a13.3 13.3 0 1 1 5.1 2.9l-6.5 2.2Z" fill="none" stroke="#fff" stroke-width="2.7" stroke-linejoin="round"/>
-<path d="M19.3 18.2c.4-.8 1-1 1.7-.8l2 .9c.5.2.7.7.5 1.2l-.8 1.8c1 1.8 2.3 3 4.1 4l1.7-.8c.5-.2 1 0 1.2.5l.9 2c.2.6 0 1.2-.7 1.6-1 .6-2.1.9-3.3.5-5.2-1.6-9-5.4-10.6-10.6-.4-1.2-.1-2.3.5-3.3.6-.7 1.2-.9 1.6-0.8Z" fill="#fff"/>
+<circle cx="24" cy="24" r="24" fill="#25D366"/>
+<path fill="#fff" d="M24 9.5A14.5 14.5 0 0 0 11.4 31.2L9.5 38.5l7.5-2a14.5 14.5 0 1 0 7-27Zm0 26.3a11.7 11.7 0 0 1-6-1.65l-.43-.26-4.45 1.18 1.19-4.32-.28-.45A11.7 11.7 0 1 1 24 35.8Z"/>
+<path fill="#25D366" d="M18.2 16.7c.35-.8.72-.82 1.18-.84.3-.02.62-.02.95-.02.3 0 .78.12 1.08.83l1.02 2.45c.17.41.1.74-.08 1.05l-.78 1.1c-.17.24-.35.51-.15.85.2.35.88 1.43 1.9 2.31 1.3 1.13 2.39 1.48 2.73 1.65.34.17.55.15.76-.1l1.02-1.25c.24-.3.5-.24.84-.1l2.25 1.06c.34.16.56.24.64.38.08.15.08.84-.2 1.65-.28.8-1.61 1.54-2.24 1.64-.58.1-1.3.14-2.1-.13-.49-.16-1.12-.36-1.93-.71-3.4-1.47-5.62-4.9-5.79-5.13-.17-.23-1.38-1.84-1.38-3.5 0-1.65.87-2.47 1.18-2.8Z"/>
 </svg></a>
 
 <!-- Snapchat Pixel: ضع كود Snap Pixel الخاص بك هنا بعد إنشائه من Snapchat Ads Manager. -->
